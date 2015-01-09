@@ -21,13 +21,14 @@ public class RobotPlayer{
 	static int netChan = 5;
 	static int oldSpendingChan = 6;
 
+	// test github
 	
 	// Main Control Loop****************************************
 	public static void run(RobotController myrc) throws GameActionException{
 		
 		int totalSpending = 10;
-		int oldSpending = 10;
-		int x = 0;
+		//int oldSpending = 0;
+		//int x = 0;
 		int oldOreCount = 0;
 		int oreCount = 0;
 		int net = 0;
@@ -61,7 +62,7 @@ public class RobotPlayer{
 						rc.broadcast(netChan, net);
 							
 						// calc spending
-						oldSpending = rc.readBroadcast(oldSpendingChan); // N-2
+						// oldSpending = rc.readBroadcast(oldSpendingChan); // N-2
 						totalSpending = rc.readBroadcast(totalSpendingChan); // from turn N-1
 							
 						net = rc.readBroadcast(netChan);
